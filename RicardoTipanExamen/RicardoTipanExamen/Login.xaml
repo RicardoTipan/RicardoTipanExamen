@@ -5,10 +5,14 @@
 
     <StackLayout>
 
-        <Image Source="https://sbsconsulting.com.ec/wp-content/uploads/2018/01/LOGO-UISRAEL-768x209.png"
-               HeightRequest="50" />
-        <Frame BackgroundColor="#2196F3" Padding="24" CornerRadius="0">
-            <Label Text="Registro de Estudiantes y Pagos" HorizontalTextAlignment="Center" TextColor="White" FontSize="36"/>
+        <ImageButton Grid.Row="3" Grid.Column="0" 
+                    Source="https://c0.klipartz.com/pngpicture/914/805/gratis-png-pizza-hamburguesa-logotipo-hamburguesa-comida-rapida-pollo-frito-pizza-comida-rapida-thumbnail.png
+"
+                    HorizontalOptions="Center"
+                    VerticalOptions="CenterAndExpand"/>
+
+        <Frame  Padding="10" CornerRadius="0">
+            <Label Text="Menu Restaurante Buen Apetito" HorizontalTextAlignment="Center" TextColor="#12A06B" FontSize="Small" AutomationProperties.IsInAccessibleTree="False"/>
         </Frame>
 
         <Label Text="Ingrese Usuario " FontSize="20" FontAttributes="Bold" TextColor="#070c0f"/>
@@ -20,7 +24,7 @@
                IsPassword="True"/>
 
         <Button x:Name="btnIng" Text="Ingresar" 
-                    Clicked="btnIng_Clicked" BackgroundColor="#f4ed47" TextColor="#0051ba" FontSize="15" FontAttributes="Bold"/>
+                    Clicked="btnIng_Clicked" BackgroundColor="#47F4A6" TextColor="#0051ba" FontSize="15" FontAttributes="Bold"/>
 
 
 

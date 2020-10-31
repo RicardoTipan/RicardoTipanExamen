@@ -1,0 +1,56 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="RicardoTipanExamen.Menu">
+    <ContentPage.Content>
+
+        <Grid>
+            <Grid.RowDefinitions>
+                <RowDefinition Height="*"/>
+                <RowDefinition Height="*"/>
+                <RowDefinition Height="*"/>
+                <RowDefinition Height="*"/>
+
+
+
+            </Grid.RowDefinitions>
+
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="*"/>
+
+
+            </Grid.ColumnDefinitions>
+
+            <Button x:Name="btnMen1" Text="Seleccione Comida Rapida" Grid.Row="0" Grid.Column="1"
+                    Clicked="btnMen1_Clicked"  TextColor="#0051ba" FontSize="Small" FontAttributes="Bold"/>
+            <ImageButton Grid.Row="0" Grid.Column="0" 
+                    Source="https://c0.klipartz.com/pngpicture/515/655/gratis-png-comida-rapida-comida-chatarra-hamburguesa-papas-fritas-comida-chatarra-thumbnail.png"
+                    HorizontalOptions="Center"
+                    VerticalOptions="CenterAndExpand"/>
+
+            <Button x:Name="btnMen2" Text="Seleccione Plato Fuerte" Grid.Row="1" Grid.Column="1"
+                    Clicked="btnMen2_Clicked"  TextColor="#42BA00" FontSize="Small" FontAttributes="Bold"/>
+            <ImageButton Grid.Row="1" Grid.Column="0" 
+                    Source="https://c0.klipartz.com/pngpicture/692/99/gratis-png-hamburguesa-comida-de-la-calle-mariscos-comida-rapida-deliciosa-comida-salmon-con-ensalada-de-verduras-en-un-plato-thumbnail.png"
+                    HorizontalOptions="Center"
+                    VerticalOptions="CenterAndExpand"/>
+
+            <Button x:Name="btnMen3" Text="Seleccione Menu Varios" Grid.Row="2" Grid.Column="1"
+                    Clicked="btnMen3_Clicked"  TextColor="#00BAA8" FontSize="Small" FontAttributes="Bold"/>
+            <ImageButton Grid.Row="2" Grid.Column="0" 
+                    Source="https://c1.klipartz.com/pngpicture/924/844/sticker-png-healthy-food-healthy-diet-meal-eating-health-food-restaurant-intermittent-fasting-diet-food-thumbnail.png"
+                    HorizontalOptions="Center"
+                    VerticalOptions="CenterAndExpand"/>
+
+            <Button x:Name="btnMen4" Text="Seleccione Porciones" Grid.Row="3" Grid.Column="1"
+                    Clicked="btnMen4_Clicked"  TextColor="#0050BA" FontSize="Small" FontAttributes="Bold"/>
+            <ImageButton Grid.Row="3" Grid.Column="0" 
+                    Source="https://c0.klipartz.com/pngpicture/914/805/gratis-png-pizza-hamburguesa-logotipo-hamburguesa-comida-rapida-pollo-frito-pizza-comida-rapida-thumbnail.png"
+                    HorizontalOptions="Center"
+                    VerticalOptions="CenterAndExpand"/>
+
+
+
+        </Grid>
+    </ContentPage.Content>
+</ContentPage>

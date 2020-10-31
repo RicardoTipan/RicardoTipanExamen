@@ -6,6 +6,7 @@ using System.Threading.Tasks;
 
 using Xamarin.Forms;
 using Xamarin.Forms.Xaml;
+using System.Net;
 
 namespace RicardoTipanExamen
 {
@@ -20,28 +21,32 @@ namespace RicardoTipanExamen
 
         }
 
-        private void bntCal_Clicked(object sender, EventArgs e)
+        
+
+        private async void bntReg_Clicked(object sender, EventArgs e)
         {
-            
             try
             {
-                double nCuota = Convert.ToDouble(txtCuo.Text);
-                double resultado = 0;
-                if (nCuota <= 1800)
-                {
-                    resultado = nCuota / 1800;
-                    txtCuo.Text = resultado.ToString();
-                }
-
-
-
+                WebClient Registro = new WebClient();
+                var parametros = new System.Collections.Specialized.NameValueCollection();
+                parametros.Add("codigo", txtCod.Text);
+                parametros.Add("codigo", txtNom.Text);
+                parametros.Add("codigo", txtApe.Text);
+                parametros.Add("codigo", txtIde.Text);
+                Registro.UploadValues("http://192.168.1.5/Rest/post.php", "post", parametros);
+                await DisplayAlert("alerta", "Dato ingresado correctamente", "ok");
             }
             catch (Exception ex)
             {
-                DisplayAlert("Mensaje de Alerta", ex.Message, "Aceptar");
+                await DisplayAlert("alerta", "Error: " + ex.Message, "ok");
             }
 
+        }
 
+        private async void bntSig_Clicked(object sender, EventArgs e)
+        {
+            await Navigation.PushAsync(new Menu());
         }
     }
+
 }

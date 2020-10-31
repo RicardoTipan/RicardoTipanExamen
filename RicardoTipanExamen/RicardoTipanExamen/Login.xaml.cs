@@ -1,24 +1,40 @@
-﻿using System;
+﻿using Newtonsoft.Json;
+using System;
 using System.Collections.Generic;
-using System.ComponentModel;
+using System.Collections.ObjectModel;
 using System.Linq;
+using System.Net.Http;
 using System.Text;
 using System.Threading.Tasks;
-using System.Windows.Input;
 using Xamarin.Forms;
 
 namespace RicardoTipanExamen
 {
     public partial class MainPage : ContentPage
     {
+        private const string Url = "http://192.168.1.5/Rest/post.php";
+        private readonly HttpClient client = new HttpClient();
+        private ObservableCollection<RicardoTipanExamen.Ws.Datos> _post;
+
+
         string errorMessage = null;
 
         public MainPage()
         {
             InitializeComponent();
+            get();
         }
 
-        void limpiar()
+        public async void get()
+        {
+            var content = await client.GetStringAsync(Url);
+            List<RicardoTipanExamen.Ws.Datos> posts = JsonConvert.DeserializeObject<List<RicardoTipanExamen.Ws.Datos>>(content);
+            _post = new ObservableCollection<RicardoTipanExamen.Ws.Datos>(posts);
+            
+        }
+
+
+            void limpiar()
         {
             txtUsu.Text = string.Empty;
             txtCon.Text = string.Empty;
@@ -29,7 +45,7 @@ namespace RicardoTipanExamen
             string usuario = txtUsu.Text;
             string contraseña = txtCon.Text;
 
-            if (txtUsu.Text == "est" && txtCon.Text == "uis")
+            if (txtUsu.Text == "invitado" && txtCon.Text == "invitado")
             {
                 await DisplayAlert("Acceso Correcto", errorMessage, "OK");
                 await Navigation.PushAsync(new Registro(usuario, contraseña));
