@@ -29,7 +29,7 @@ namespace RicardoTipanExamen
             string usuario = txtUsu.Text;
             string contraseña = txtCon.Text;
 
-            if (txtUsu.Text == "est" && txtCon.Text == "uis")
+            if (txtUsu.Text == "estudiante2020" && txtCon.Text == "uisrael2020")
             {
                 await DisplayAlert("Acceso Correcto", errorMessage, "OK");
                 await Navigation.PushAsync(new Registro(usuario, contraseña));

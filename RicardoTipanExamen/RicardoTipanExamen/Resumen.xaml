@@ -1,0 +1,24 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="RicardoTipanExamen.Resumen">
+    <ContentPage.Content>
+        <StackLayout>
+
+            <Label x:Name="txtnombre" Grid.Row="0" Grid.Column="0" FontSize="Medium"
+                   FontAttributes="Bold" TextColor="#00CB38"
+                   HorizontalOptions="End" VerticalOptions="End" AutomationProperties.IsInAccessibleTree="False"/>
+
+            <Label x:Name="txtMonIn" Grid.Row="0" Grid.Column="0" FontSize="Medium"
+                   FontAttributes="Bold" TextColor="#00CB38"
+                   HorizontalOptions="End" VerticalOptions="End" AutomationProperties.IsInAccessibleTree="False"/>
+
+            <Label x:Name="txtMonMen" Grid.Row="0" Grid.Column="0" FontSize="Medium"
+                   FontAttributes="Bold" TextColor="#00CB38"
+                   HorizontalOptions="End" VerticalOptions="End" AutomationProperties.IsInAccessibleTree="False"/>
+
+
+
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>

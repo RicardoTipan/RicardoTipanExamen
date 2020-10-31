@@ -20,7 +20,7 @@
                IsPassword="True"/>
 
         <Button x:Name="btnIng" Text="Ingresar" 
-                    Clicked="btnIng_Clicked" BackgroundColor="#f4ed47" TextColor="#0051ba" FontSize="15" FontAttributes="Bold"/>
+                    Clicked="btnIng_Clicked" BackgroundColor="#4784F4" TextColor="#0051ba" FontSize="15" FontAttributes="Bold"/>
 
 
 
