@@ -24,7 +24,11 @@
                IsPassword="True"/>
 
         <Button x:Name="btnIng" Text="Ingresar" 
+<<<<<<< HEAD
                     Clicked="btnIng_Clicked" BackgroundColor="#47F4A6" TextColor="#0051ba" FontSize="15" FontAttributes="Bold"/>
+=======
+                    Clicked="btnIng_Clicked" BackgroundColor="#4784F4" TextColor="#0051ba" FontSize="15" FontAttributes="Bold"/>
+>>>>>>> d7fc670ce8f569a8a0011fef68a19536b86600ed
 
 
 
